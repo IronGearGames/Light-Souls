@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private bool faceRight = true;
     private bool isRunning = false;
+    public bool isGrounded = false;
     private float speed = 5.0f;
 
     // Start is called before the first frame update
@@ -54,16 +55,26 @@ public class PlayerController : MonoBehaviour
         }
 
         transform.position += horizontal * speed * Time.deltaTime;
+
+        Jump();
     }
 
     /*
      Custom functions
-         */
+    */
 
     // Flips animation and sets faceRight bool, possibly good for later use
     void Flip()
     {
         faceRight = !faceRight;
         animator.transform.Rotate(0, 180, 0);
+    }
+
+    void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        {
+            gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 15f), ForceMode2D.Impulse);
+        }
     }
 }
