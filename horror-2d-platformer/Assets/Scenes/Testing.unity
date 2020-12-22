@@ -787,7 +787,6 @@ GameObject:
   - component: {fileID: 1446179739}
   - component: {fileID: 1446179740}
   - component: {fileID: 1446179741}
-  - component: {fileID: 1446179742}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -911,6 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39561eefb5579e242a9b7f57540f7b43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   animator: {fileID: 1446179742}
   isGrounded: 0
 --- !u!95 &1446179742
@@ -932,6 +932,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+=======
+>>>>>>> parent of cbeddd9... completed a healthbar and slider
 --- !u!1 &1575986987
 GameObject:
   m_ObjectHideFlags: 0
